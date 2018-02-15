@@ -1,3 +1,3 @@
 # MyBin
-Useful utilities
+* Useful utilities
 
