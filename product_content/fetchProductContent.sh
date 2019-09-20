@@ -7,7 +7,7 @@ NO_HEADER_OUTPUT_FILE=ProductContent.csv
 S3_DESTINATION=dev.au.productsearch-processor-input
 
 echo "Executing stored procedure -> pw_wsp_ProductGetAll 'en', 3"
-sqlcmd -Q "set nocount on; exec pw_wsp_ProductGetAll 'en', 3" -S sqlserver.dev.local -U BIDataExtractor -P Foobaz16 -d Lotus -o ${TEMP_OUTPUT_FILE} -s"|" -W
+sqlcmd -Q "set nocount on; exec pw_wsp_ProductGetAll 'en', 3" -S sqlserver.dev.test -U user -P password -d Lotus -o ${TEMP_OUTPUT_FILE} -s"|" -W
 
 if [ -f ${TEMP_OUTPUT_FILE} ]
 then

@@ -1,3 +1,8 @@
 lambda_prod.list
 lambda_dev.list
 
+/aws-shell-pyve/
+*.pyc
+/CustomerSales-Consumer.json
+/lambda-history.txt
+/profile-history.txt

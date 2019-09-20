@@ -23,7 +23,7 @@ OPTIONS:
 
 EXAMPLES:
    List DynamoDB configs in given table using the given AWS profile:
-        $ ldyn -t lambda_config -p tkt_prod_ro
+        $ ldyn -t lambda-config -p tkt_prod_ro
 
    List DynamoDB configs in default table using default AWS profile:
         $ ldyn
@@ -46,7 +46,7 @@ case "${1}" in
   ;;
   -h|--help)
   help_menu
-  shift
+  exit 0
   ;;
   *)
   echo "${1} is not a valid flag, try running: ${0} --help"

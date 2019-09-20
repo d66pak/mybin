@@ -5,7 +5,7 @@ DEFAULT_TABLE="${DEFAULT_TABLE:-Config}"
 
 
 function describe_config () {
-	/home/deepakt/Documents/dev/my_ve/bin/python /home/deepakt/Documents/dev/mybin/get_item.py ${1} ${2} ${3} | jq .
+	/home/deepak/venv3-default/bin/python /home/deepak/Documents/dev/mybin/get_item.py ${1} ${2} ${3} | jq .
 }
 
 function help_menu () {
@@ -23,10 +23,10 @@ OPTIONS:
 
 EXAMPLES:
    Describe DynamoDB config of given key in given table using the given AWS profile:
-        $ ldyn -k DataEnricher -t lambda_config -p tkt_prod_ro
+        $ ddyn -k DataEnricher -t lambda-config -p tkt_prod_ro
 
    Describe DynamoDB config of given key in default table using default AWS profile:
-        $ ldyn -k DataEnricher
+        $ ddyn -k DataEnricher
 
 NOTE:
    Requires aws cli and jq being installed.

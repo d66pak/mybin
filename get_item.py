@@ -19,7 +19,7 @@ def main():
 	aws_profile=sys.argv[3]
 
 	item = boto3.session.Session(profile_name=aws_profile).resource('dynamodb').Table(table_name).get_item(Key={'lambda_name': key}).get('Item', {})
-	print json.dumps(item, cls=DecimalEncoder)
+	print(json.dumps(item, cls=DecimalEncoder))
 
 
 if __name__ == '__main__':
